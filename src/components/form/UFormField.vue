@@ -65,9 +65,9 @@ watchEffect(() => {
 <template>
   <div class="form-field" :class="{ pt5: field.type === FieldTypesEnum.U_CHECKBOX }">
     <div class="form-field_container">
-      <label v-if="field.label && field.type !== FieldTypesEnum.U_CHECKBOX">{{
-        field.label
-      }}</label>
+      <label v-if="field.label && field.type !== FieldTypesEnum.U_CHECKBOX"
+        >{{ field.label }}<span v-if="field.validation.required">*</span></label
+      >
 
       <component
         :is="component"
@@ -78,7 +78,11 @@ watchEffect(() => {
         class="form-control"
       >
         <template v-if="field.type === FieldTypesEnum.U_SELECT">
-          <option v-for="option in (field as SelectField).options" :key="option.id" :value="option.id">
+          <option
+            v-for="option in (field as SelectField).options"
+            :key="option.id"
+            :value="option.id"
+          >
             {{ option.name }}
           </option>
         </template>

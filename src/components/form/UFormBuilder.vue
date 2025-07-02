@@ -6,14 +6,15 @@ import UButton from "../button/UButton.vue";
 
 interface Props {
   fields: FormFieldType[];
+  callback: () => {};
 }
-defineProps<Props>();
+const props = defineProps<Props>();
 
 const formData = reactive({});
 const errors = reactive({});
 
 const isFormValid = computed(() => Object.values(errors).every((el) => !el));
-const submitForm = () => console.log("SUBMIT");
+const submitForm = () => props.callback();
 </script>
 
 <template>

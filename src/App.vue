@@ -1,13 +1,14 @@
 <script setup>
 import { fields } from "@/configs/login-form-config";
 import UFormBuilder from "@/components/form/UFormBuilder.vue";
-import "@/assets/styles/variables.scss";
+
+const onSubmit = () => alert("Отправка формы");
 </script>
 
 <template>
   <main>
     <div class="form_title">Регистрация</div>
-    <UFormBuilder :fields="fields" />
+    <UFormBuilder :fields="fields" :callback="onSubmit" />
   </main>
 </template>
 
