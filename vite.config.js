@@ -6,7 +6,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "http://OlyaBogdanova.github.io/fs-test/",
+  base: "http://olyabogdanova.github.io/fs-test/",
   css: {
     preprocessorOptions: {
       scss: {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "http://OlyaBogdanova/fs-test",
+  "homepage": "http://olyabogdanova.github.io/fs-test/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
